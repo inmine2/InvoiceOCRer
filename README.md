@@ -13,4 +13,6 @@ self.ActOCR = PaddleOCR(rec_model_dir=r'E:\Python\Python38\Lib\site-packages\pad
                         cls_model_dir=r'E:\Python\Python38\Lib\site-packages\paddleocr\2.1\cls',
                         det_model_dir=r'E:\Python\Python38\Lib\site-packages\paddleocr\2.1\det\ch')
                         
-place the path with the actual path in the setp 2.
+Replace the path with the actual path in the setp 2.
+
+4. Run **OCRWindow.py** to get what you want.
