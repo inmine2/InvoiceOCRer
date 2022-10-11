@@ -74,10 +74,24 @@ class OCRInvoice:
             amounts = [float(i) for i in amounts]
             amounts.sort()
             self.amount = amounts[-2]
+            
+#             """建议修改部分"""
+#             amounts = re.findall('([0-9]*?\..[0-9]*?)】', invoice2)
+#             amounts = [float(i) for i in amounts]
+#             amounts = list(set(amounts))
+#             amounts.sort()
+#             # 发票总金额
+#             self.totalAmount = amountslst[-1]
+#             # 无税金额
+#             self.amount = amountslst[-2]
+#             # 发票税额
+#             self.totalTax = amountslst[-3]
         except:
             self.amount = ''
 
         self.OneInv = [path,self.daima, self.number, self.ymd, self.amount]
+#             """同步修改部分"""
+#         self.OneInv = [path,self.daima, self.number, self.ymd, self.totalAmount, self.amount, self.totalTax]
         #print(self.OneInv)
         return self.OneInv
 
